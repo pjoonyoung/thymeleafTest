@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>href 연습</title>
+</head>
+<body>
+	<div>
+		<a href="elseif?param1=tiger&param2=lion">elseif로 이동1</a>	
+	</div>
+	<div>
+		<a th:href="@{/elseif(param1='tiger',param2='lion')}">elseif로 이동2(파라미터 전달)</a>	
+	</div>
+	
+	<div>
+		<a th:href="@{/login(id='tiger', pw='12345')}">로그인</a>
+	
+	</div>
+	
+	<div>
+		<a th:href="@{https://naver.com}">네이버로 이동!</a>
+	</div>
+</body>
+</html>

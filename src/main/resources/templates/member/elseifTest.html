@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>조건문 테스트</title>
+</head>
+<body>
+	
+	<div th:switch="${member1.age}>15">
+		<span th:case=true>15초과</span>
+		<span th:case=false>15미만</span>
+	</div>	
+	<hr>
+	<div th:switch="${member2.age}">
+		<span th:case=20>20살</span>
+		<span th:case=30>30살</span>
+	</div>
+	<hr>
+	<div th:switch="${member3.age}">
+		<span th:case=20>20살</span>
+		<span th:case=30>30살</span>
+	</div>
+	
+</body>
+</html>

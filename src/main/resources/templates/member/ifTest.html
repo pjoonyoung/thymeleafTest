@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>조건문 연습</title>
+</head>
+<body>
+	<table border="1" cellspacing="0" cellpadding="0">
+		<tr>
+			<th>번호</th>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>이메일</th>
+			<th>나이</th>
+		</tr>
+			
+		<tr th:each="mdto, status:${memberDtos}">
+			<!-- <tr th:each="mdto:${memberDtos}"> -->
+			<td th:if="${status.even}" th:text="짝수"></td>
+			<td th:unless="${status.even}" th:text="홀수"></td>
+			<td th:text="${mdto.id}">tiger</td>
+			<td th:text="${mdto.name}">김유신</td>
+			<td th:text="${mdto.email}">jjjj@abc.com</td>
+			<td th:text="${mdto.age}">23</td>
+		</tr>
+	</table>
+</body>
+</html>

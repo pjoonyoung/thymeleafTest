@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>반복문 테스트</title>
+</head>
+<body>
+	<table border="1" cellspacing="0" cellpadding="0">
+		<tr>
+			<th>번호</th>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>이메일</th>
+			<th>나이</th>
+		</tr>
+			
+		<tr th:each="mdto, status:${memberDtos}">
+			<!-- <tr th:each="mdto:${memberDtos}"> -->
+			<td th:text="${status.index}+1"></td>
+			<td th:text="${mdto.id}">tiger</td>
+			<td th:text="${mdto.name}">김유신</td>
+			<td th:text="${mdto.email}">jjjj@abc.com</td>
+			<td th:text="${mdto.age}">23</td>
+		</tr>
+	</table>
+</body>
+</html>
